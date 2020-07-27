@@ -15,7 +15,6 @@ class Landing extends CI_Controller
 	{
 		$data['session'] = $this->session->all_userdata();
 		$data['title'] = 'Dashboard';
-		$data['tampil_aduan'] = $this->landing_model->get_aduan();
 		$data['content'] = 'user/landing';
 		$this->load->view('front/media', $data);
 	}
@@ -32,6 +31,7 @@ class Landing extends CI_Controller
 	{
 		$data['session'] = $this->session->all_userdata();
 		$data['title'] = 'Form Laporan Aduan';
+		$data['tampil_aduan'] = $this->landing_model->get_aduan();
 		$data['content'] = 'user/lapor';
 		$this->load->view('front/media', $data);
 	}
