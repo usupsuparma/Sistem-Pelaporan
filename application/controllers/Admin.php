@@ -33,7 +33,7 @@ class Admin extends CI_Controller {
 	{
 		$data['session'] = $this->session->all_userdata();
 		$data['title'] = 'Riwayat';
-		$data['aduan'] = $this->admin_model->get_aduan();
+		$data['aduan'] = $this->admin_model->get_data_aduan();
 		$data['content'] = 'admin/riwayat';
 		$this->load->view('layout/media', $data);
 	}
